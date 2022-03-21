@@ -104,7 +104,7 @@ public class Implementor implements Impler {
             signature.append("package ").append(packageName).append(";").append(NEW_LINE);
         }
         signature.append(NEW_LINE).append("public class ").append(token.getSimpleName())
-                .append("Impl ").append(token.isInterface() ? "implements " : "extends ").append(token.getSimpleName()).append(" {").append(NEW_LINE);
+                .append("Impl ").append(token.isInterface() ? "implements " : "extends ").append(token.getCanonicalName()).append(" {").append(NEW_LINE);
         bufferedWriter.write(signature.toString());
     }
 
